@@ -1,0 +1,17 @@
+<div class="se_slider">
+    <div class="se_slider__heading">
+        <p> Refine Flight Search</p>
+    </div>
+    <div class="se_slider__range-values">
+        <div class="range-values__min-value">
+            ${{rangeValues[0]}}
+        </div>
+        <div class="range-values__max-value">
+            ${{rangeValues[1]}}
+        </div>
+    </div>
+    <div class="se_slider__slider_widget">
+        <p-slider [(ngModel)]="rangeValues" [range]="true"
+                  styleClass="se-slider" [max]="3000" (onChange)="onSliderChange()"></p-slider>
+    </div>
+</div>

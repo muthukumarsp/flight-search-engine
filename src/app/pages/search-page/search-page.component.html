@@ -1,0 +1,41 @@
+<div>
+    <header class="se-header">
+        <h1 class="se-header__title"> Flight Search Engine</h1>
+    </header>
+
+    <main class="row se-main">
+        <aside class="col-xs-3 se-sidebar">
+            <form class="se-from">
+                <app-search-form (searchResult)="handleSearchResult($event)">
+
+                </app-search-form>
+
+            </form>
+            <div class="se-slider">
+                <app-slider (priceRangeChanged)="handlePriceRangeChange($event)"
+                            [fareRange]="priceRangeFromSearchResults">
+                </app-slider>
+            </div>
+        </aside>
+        <section class="col-xs-9 se-results">
+
+            <div class="row se-results__summary">
+                <div class=" col-xs-12 col-md-9 left-box">
+                    Your Results
+                </div>
+                <div class="col-xs-12 col-md-3 right-box">
+                    <p>
+                        Depart: {{flightSearchDetails.departDate}}
+                    </p>
+                    <p>
+                        Return: {{flightSearchDetails.returnDate}}
+                    </p>
+                </div>
+            </div>
+            <div class="se-results__list" *ngFor="let flight of flightsFiltered;">
+                <app-search-result [flightDetail]="flight"></app-search-result>
+            </div>
+
+        </section>
+    </main>
+</div>

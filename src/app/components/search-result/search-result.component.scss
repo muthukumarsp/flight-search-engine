@@ -1,0 +1,35 @@
+$border-standard: 1px solid grey;
+$margin-standard: 10px;
+$font-size-title: 20px;
+
+.se-result {
+  border: $border-standard;
+  margin-bottom: $margin-standard;
+  justify-content: space-between;
+  align-items: center;
+
+  .se-result__icon-container {
+    margin-left: $margin-standard;
+  }
+  .se-result__icon-container__icon {
+    width: 125px;
+    height: 60px;
+  }
+  .se-result__price {
+    font-size: $font-size-title;
+    display: flex;
+    align-items: center;
+  }
+  .se-result__select-box {
+    //display: flex;
+    //align-items: center;
+    //margin-right: $margin-standard;
+  }
+  .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+}
+
+

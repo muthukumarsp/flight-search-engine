@@ -1,0 +1,55 @@
+<div class="se-form-btn-group">
+    <span class="se-form-btn-group__option" [ngClass]="{active: isOneWayTrip}"> <a
+            (click)="handleOneWayTrip()"> One way</a></span>
+    <span class="se-form-btn-group__option" [ngClass]="{active: !isOneWayTrip}"><a
+            (click)="handleReturnTrip()"> Return</a></span>
+</div>
+<form class="se-form" [formGroup]="flightSearchForm" (ngSubmit)="doSearch()">
+    <div>
+        <label class="se-form__label" for="from_city">
+            From
+        </label>
+        <input type="text" formControlName="from" class="se-form__input" id="from_city"/>
+    </div>
+
+    <div>
+        <label class="se-form__label" for="to_city">
+            Destination
+        </label>
+        <input type="text" formControlName="destination" class="se-form__input" id="to_city"/>
+    </div>
+
+    <div>
+        <label class="se-form__label" for="departure-date">
+            Departure Date
+        </label>
+        <input type="date" formControlName="departureDate" class="se-form__input" id="departure-date"/>
+    </div>
+
+    <div *ngIf="!isOneWayTrip">
+        <label class="se-form__label" for="return-date">
+            Return Date
+        </label>
+        <input type="date" formControlName="returnDate" class="se-form__input" id="return-date"/>
+    </div>
+
+    <div>
+        <label class="se-form__label" for="passengers">
+            Passengers
+        </label>
+        <select formControlName="passengers" class="se-form__input" id="passengers">
+            <option> 1</option>
+            <option> 2</option>
+            <option> 3</option>
+            <option> 4</option>
+        </select>
+    </div>
+
+    <div class="submit-button-block">
+        <button type="submit" class="submit-button-block__submit se-button-common"
+                [disabled]="!flightSearchForm.valid"> Search
+        </button>
+    </div>
+
+
+</form>

@@ -1,0 +1,35 @@
+<div class="row  se-result">
+    <div class="col-md-2  col-xs-6 se-result__icon-container vcenter">
+        <img class="se-result__icon-container__icon" src="assets/icons/email_icon.png"/>
+    </div>
+
+    <div class="col-md-3 col-xs-6 vcenter">
+
+        <app-flight-detail-box
+                [flight_number]="flight.flight_number"
+                [fromCity]="flight.fromCity"
+                [destinationCity]="flight.destinationCity"
+                [departTime]="flight.departTime"
+                [arriveTime]="flight.arriveTime"
+        ></app-flight-detail-box>
+    </div>
+    <div class="col-md-2  col-xs-6 vcenter">
+
+        <app-flight-detail-box
+                [flight_number]="flight.flight_number"
+                [fromCity]="flight.fromCity"
+                [destinationCity]="flight.destinationCity"
+                [departTime]="flight.departTime"
+                [arriveTime]="flight.arriveTime"
+        ></app-flight-detail-box>
+    </div>
+
+    <div class="col-md-2 col-xs-6 se-result__price vcenter">
+        <h2 class="title"> ${{flight.price}}</h2>
+    </div>
+
+    <div class=" col-md-2 col-xs-6 vcenter se-result__select-box">
+        <button class="se-button-common"> Select this flight</button>
+    </div>
+</div>
+

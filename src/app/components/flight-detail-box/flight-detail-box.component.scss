@@ -1,0 +1,23 @@
+$font-size-flight-detail-bigger-text: 14px;
+$font-size-flight-detail-small-text: 10px;
+
+.fligt-details {
+  .fligt-details__flight-number {
+    font-size: $font-size-flight-detail-small-text;
+    margin: 10px 0;
+  }
+  .fligt-details__flight-route {
+    //margin
+    font-size: $font-size-flight-detail-bigger-text;
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+  .fligt-details__depart-time {
+    font-size: $font-size-flight-detail-small-text;
+    margin-bottom: 4px;
+  }
+  .fligt-details__arrive-time {
+    font-size: $font-size-flight-detail-small-text;
+    margin-bottom: 10px;
+  }
+}
